@@ -1,22 +1,21 @@
-# Compiled class file
-*.class
+import java.util.Scanner; 
+public class TurkeyForChristmas {
 
-# Log file
-*.log
+	
+	public static void main(String[] args) {
+		Scanner kb = new Scanner(System.in);
+		System.out.println("How many kilos is the turkey?");
+		String answer = kb.nextLine();
+		double weight = Double.parseDouble(answer);
+		double cookingtime = ((weight*2.2*20)/60);
+		double cookingrounded = (Math.round(cookingtime*100.0));
+		
+		System.out.println("The cooking time for your turkey is: ");
+		System.out.printf("%.2f %5s", cookingrounded/100, "hours");
+		
+		
 
-# BlueJ files
-*.ctxt
+	}
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+}
 
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
